@@ -66,6 +66,29 @@ mysock.close()
 
 
 '''
+Output: 
+
+HTTP/1.1 200 OK
+Date: Mon, 14 Oct 2024 15:41:32 GMT
+Server: Apache/2.4.52 (Ubuntu)
+Last-Modified: Sat, 13 May 2017 11:22:22 GMT
+ETag: "a7-54f6609245537"
+Accept-Ranges: bytes
+Content-Length: 167
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Pragma: no-cache
+Expires: Wed, 11 Jan 1984 05:00:00 GMT
+Connection: close
+Content-Type: text/plain
+
+But soft what light through yonder window breaks
+It is the east and Juliet is the sun
+Arise fair sun and kill the envious moon
+Who is already s
+ick and pale with grief
+'''
+
+'''
 Explanation: 
 
 First we're going to import the socket library and we're going to make a socket. Now, this doesn't actually make a connection, think of a socket as a file handle that It doesn’t have any data associated with it yet.

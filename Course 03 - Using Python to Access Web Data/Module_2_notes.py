@@ -308,8 +308,8 @@ So, now it looks at it and says "Okay, I've got a beginning F, and I can stop at
 '''
 
 '''
-$ Fine-Tuning String Extraction
--------------------------------
+$ Fine-Tuning String Extraction:
+--------------------------------
 '''
 text2 = 'From stephen.marquard@uct.ac.za Sat Jan  5 09:14:16 2008'
 
@@ -322,9 +322,12 @@ print(f) # Output: ['stephen.marquard@uct.ac.za']
 
 • Parentheses are not part of the match - but they tell where to start and stop what string to extract.
 
-Regarding the SyntaxWarning:
+• Regarding the SyntaxWarning:
+-----------------------------
 The warning SyntaxWarning: invalid escape sequence '\S' is shown because \S is an escape sequence in regex, but Python treats backslashes (\) as escape characters in strings too (e.g., \n for a newline).
+
 To avoid this warning, you should use raw strings by adding an r in front of the string. This tells Python to treat the backslashes as literal characters rather than escape sequences in the string itself.
+
 This will prevent Python from interpreting \S as an escape sequence, avoiding the warning.
 '''
 r = re.findall(r'^From (\S+@\S+)', text2)
