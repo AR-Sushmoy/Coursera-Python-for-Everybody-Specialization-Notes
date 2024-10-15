@@ -16,16 +16,23 @@ Hint: The first character of the name of the last page that you will load is: H
 import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 
-url = input('Enter - ')
-html = urllib.request.urlopen(url).read()
-soup = BeautifulSoup(html, 'html.parser')
+url = input('Enter URL - ')
+try:
+    count = int(input('Enter The Number of repetitions - '))
+    position = int(input('Position of the link - '))
+except:
+    print('Somthing\'s wrong with the value')
+    quit()
 
-tags = soup('a')
-links = list()
+current_url = url
+print('Retrieving:', current_url)
+for i in range(count):
+    html_page = urllib.request.urlopen(current_url).read()
+    soup = BeautifulSoup(html_page, 'html.parser')
+    tags_list = soup('a')
+    current_url = tags_list[position - 1].get('href', None)
+    print('Retrieving:', current_url)
+
+print('The answer to the assignment for this execution is:', tags_list[position - 1].contents[0])  
 
 
-for tag in tags:
-    links.append(tag.get('href', None))
-    # print(f"URL: {tag.get('href', None)}")
-
-print(links)
