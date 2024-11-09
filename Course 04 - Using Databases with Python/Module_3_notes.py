@@ -1,4 +1,3 @@
 '''
-Video: 15.4
-Topic: Designing a Data Model
+Watch the lecture slides for a better review.
 '''
