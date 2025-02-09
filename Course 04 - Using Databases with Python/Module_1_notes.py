@@ -163,7 +163,7 @@ s.party()
 
 '''
 Video: 14.4
-Topic: Our First Class and Object
+Topic: Object Inheritance
 '''
 '''
 $ Inheritance:
